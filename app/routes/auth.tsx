@@ -32,13 +32,24 @@ const Auth = () => {
                                 <p>Signing you in...</p>
                             </button>
                         ) : (
-                            <>{auth.isAuthenticated ?(
-                                <button className="auto-button" onClick={auth.signOut}><p>Log Out</p></button>
-                            ) : (
-                                <button className="auto-button" onClick={auth.signIn}><p>Log In</p></button>
-
-                            )}
+                            <>
+                                {auth.isAuthenticated ? (
+                                    <button
+                                        className="auto-button bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded"
+                                        onClick={auth.signOut}
+                                    >
+                                        <p>Log Out</p>
+                                    </button>
+                                ) : (
+                                    <button
+                                        className="auto-button bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded"
+                                        onClick={auth.signIn}
+                                    >
+                                        <p>Log In</p>
+                                    </button>
+                                )}
                             </>
+
                         )}
                     </div>
 
