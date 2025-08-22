@@ -35,3 +35,5 @@ export function generateUUID(): string {
     });
 }
 
+export class cn {
+}
